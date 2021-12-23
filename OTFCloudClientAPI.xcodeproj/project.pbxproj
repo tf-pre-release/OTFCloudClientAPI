@@ -1,0 +1,856 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14307226264CEAB000E2AA75 /* OTFCloudSSETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14307225264CEAB000E2AA75 /* OTFCloudSSETests.swift */; };
+		14A37FA225C577FE007F00EF /* OTFCloudClientAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A37F9825C577FE007F00EF /* OTFCloudClientAPI.framework */; };
+		14A37FA725C577FE007F00EF /* OTFClientSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A37FA625C577FE007F00EF /* OTFClientSDKTests.swift */; };
+		14A37FA925C577FE007F00EF /* OTFCloudClientAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 14A37F9B25C577FE007F00EF /* OTFCloudClientAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14A37FB525C57852007F00EF /* TheraForgeNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A37FB425C57852007F00EF /* TheraForgeNetwork.swift */; };
+		14A37FB925C57885007F00EF /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A37FB825C57885007F00EF /* Requests.swift */; };
+		14A37FBD25C578A7007F00EF /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A37FBC25C578A7007F00EF /* Responses.swift */; };
+		14A37FC125C57A29007F00EF /* ForgeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A37FC025C57A29007F00EF /* ForgeError.swift */; };
+		14A37FCC25C57B64007F00EF /* NetworkingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A37FCB25C57B64007F00EF /* NetworkingLayer.swift */; };
+		14A37FD125C57D32007F00EF /* TheraForgeKeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A37FD025C57D32007F00EF /* TheraForgeKeychainService.swift */; };
+		14A37FDA25C57F76007F00EF /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A37FD925C57F75007F00EF /* Endpoint.swift */; };
+		14A37FDE25C57F8A007F00EF /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A37FDD25C57F8A007F00EF /* Auth.swift */; };
+		14A37FE325C57FD6007F00EF /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A37FE225C57FD6007F00EF /* URLSession+Extensions.swift */; };
+		14C7107725C6D9D30059551D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7107425C6D9D30059551D /* Event.swift */; };
+		14C7107825C6D9D30059551D /* EventSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7107525C6D9D30059551D /* EventSource.swift */; };
+		14F90479265237FA0022EA31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F90478265237FA0022EA31 /* AppDelegate.swift */; };
+		14F9047B265237FA0022EA31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F9047A265237FA0022EA31 /* SceneDelegate.swift */; };
+		14F9047D265237FA0022EA31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F9047C265237FA0022EA31 /* ViewController.swift */; };
+		14F90480265237FA0022EA31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F9047E265237FA0022EA31 /* Main.storyboard */; };
+		14F90482265237FB0022EA31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F90481265237FB0022EA31 /* Assets.xcassets */; };
+		14F90485265237FB0022EA31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F90483265237FB0022EA31 /* LaunchScreen.storyboard */; };
+		844270A4272B1932000F7D78 /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844270A3272B1932000F7D78 /* Encodable+Extensions.swift */; };
+		844270A6272B20BB000F7D78 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844270A5272B20BB000F7D78 /* Dictionary+Extensions.swift */; };
+		84A5E324272159EE0049C8C0 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A5E323272159EE0049C8C0 /* Defaults.swift */; };
+		B524E8C16ECCFBDE9270F281 /* Pods_OTFCloudClientAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254020658C942595FFFB7FEE /* Pods_OTFCloudClientAPI.framework */; };
+		E5D2C41A8FC22FBC7C9D91DE /* Pods_OTFCloudClientAPI_OTFCloudClientAPITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E08DD3EB0414626B61C6A3EC /* Pods_OTFCloudClientAPI_OTFCloudClientAPITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		14A37FA325C577FE007F00EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A37F8F25C577FE007F00EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14A37F9725C577FE007F00EF;
+			remoteInfo = TheraForgeNetworkService;
+		};
+		14F90494265238060022EA31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 14A37F8F25C577FE007F00EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 14F90475265237FA0022EA31;
+			remoteInfo = OTFCloudClientAPIApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14307225264CEAB000E2AA75 /* OTFCloudSSETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTFCloudSSETests.swift; sourceTree = "<group>"; };
+		14A37F9825C577FE007F00EF /* OTFCloudClientAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OTFCloudClientAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A37F9B25C577FE007F00EF /* OTFCloudClientAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OTFCloudClientAPI.h; sourceTree = "<group>"; };
+		14A37F9C25C577FE007F00EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14A37FA125C577FE007F00EF /* OTFCloudClientAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OTFCloudClientAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		14A37FA625C577FE007F00EF /* OTFClientSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTFClientSDKTests.swift; sourceTree = "<group>"; };
+		14A37FA825C577FE007F00EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14A37FB425C57852007F00EF /* TheraForgeNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheraForgeNetwork.swift; sourceTree = "<group>"; };
+		14A37FB825C57885007F00EF /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		14A37FBC25C578A7007F00EF /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
+		14A37FC025C57A29007F00EF /* ForgeError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgeError.swift; sourceTree = "<group>"; };
+		14A37FCB25C57B64007F00EF /* NetworkingLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingLayer.swift; sourceTree = "<group>"; };
+		14A37FD025C57D32007F00EF /* TheraForgeKeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheraForgeKeychainService.swift; sourceTree = "<group>"; };
+		14A37FD925C57F75007F00EF /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		14A37FDD25C57F8A007F00EF /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		14A37FE225C57FD6007F00EF /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
+		14C7107425C6D9D30059551D /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		14C7107525C6D9D30059551D /* EventSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSource.swift; sourceTree = "<group>"; };
+		14F90476265237FA0022EA31 /* OTFCloudClientAPIApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OTFCloudClientAPIApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14F90478265237FA0022EA31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14F9047A265237FA0022EA31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		14F9047C265237FA0022EA31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14F9047F265237FA0022EA31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14F90481265237FB0022EA31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14F90484265237FB0022EA31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		14F90486265237FB0022EA31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AB2649C69ADC1A5FF387AA5 /* Pods-OTFCloudClientAPI-OTFCloudClientAPITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudClientAPI-OTFCloudClientAPITests.release.xcconfig"; path = "Target Support Files/Pods-OTFCloudClientAPI-OTFCloudClientAPITests/Pods-OTFCloudClientAPI-OTFCloudClientAPITests.release.xcconfig"; sourceTree = "<group>"; };
+		254020658C942595FFFB7FEE /* Pods_OTFCloudClientAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTFCloudClientAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ACAB87D124398290C50A412 /* Pods-OTFCloudClientAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudClientAPI.release.xcconfig"; path = "Target Support Files/Pods-OTFCloudClientAPI/Pods-OTFCloudClientAPI.release.xcconfig"; sourceTree = "<group>"; };
+		6AEA02D9A97C123E96649A15 /* Pods-OTFCloudClientAPI-OTFCloudClientAPITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudClientAPI-OTFCloudClientAPITests.debug.xcconfig"; path = "Target Support Files/Pods-OTFCloudClientAPI-OTFCloudClientAPITests/Pods-OTFCloudClientAPI-OTFCloudClientAPITests.debug.xcconfig"; sourceTree = "<group>"; };
+		844270A3272B1932000F7D78 /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
+		844270A5272B20BB000F7D78 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		84A5E323272159EE0049C8C0 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		855851636C3ACD741B346B2F /* Pods-OTFCloudClientAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OTFCloudClientAPI.debug.xcconfig"; path = "Target Support Files/Pods-OTFCloudClientAPI/Pods-OTFCloudClientAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		E08DD3EB0414626B61C6A3EC /* Pods_OTFCloudClientAPI_OTFCloudClientAPITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OTFCloudClientAPI_OTFCloudClientAPITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14A37F9525C577FE007F00EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B524E8C16ECCFBDE9270F281 /* Pods_OTFCloudClientAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14A37F9E25C577FE007F00EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A37FA225C577FE007F00EF /* OTFCloudClientAPI.framework in Frameworks */,
+				E5D2C41A8FC22FBC7C9D91DE /* Pods_OTFCloudClientAPI_OTFCloudClientAPITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14F90473265237FA0022EA31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14A37F8E25C577FE007F00EF = {
+			isa = PBXGroup;
+			children = (
+				14A37F9A25C577FE007F00EF /* OTFCloudClientAPI */,
+				14A37FA525C577FE007F00EF /* OTFCloudClientAPITests */,
+				14F90477265237FA0022EA31 /* OTFCloudClientAPIApp */,
+				14A37F9925C577FE007F00EF /* Products */,
+				76EBED8EA7C2EE9C88AB03DF /* Pods */,
+				89FF66FEC4AB40A6C00C22C0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		14A37F9925C577FE007F00EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14A37F9825C577FE007F00EF /* OTFCloudClientAPI.framework */,
+				14A37FA125C577FE007F00EF /* OTFCloudClientAPITests.xctest */,
+				14F90476265237FA0022EA31 /* OTFCloudClientAPIApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14A37F9A25C577FE007F00EF /* OTFCloudClientAPI */ = {
+			isa = PBXGroup;
+			children = (
+				14C7107325C6D9D30059551D /* SSE */,
+				14A37FE125C57FC2007F00EF /* Extensions */,
+				14A37FCF25C57D1B007F00EF /* KeychainService */,
+				14A37FCA25C57B39007F00EF /* NetworkService */,
+				14A37FC625C57B01007F00EF /* Models */,
+				14A37F9B25C577FE007F00EF /* OTFCloudClientAPI.h */,
+				14A37F9C25C577FE007F00EF /* Info.plist */,
+			);
+			path = OTFCloudClientAPI;
+			sourceTree = "<group>";
+		};
+		14A37FA525C577FE007F00EF /* OTFCloudClientAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				84A5E323272159EE0049C8C0 /* Defaults.swift */,
+				14A37FA625C577FE007F00EF /* OTFClientSDKTests.swift */,
+				14307225264CEAB000E2AA75 /* OTFCloudSSETests.swift */,
+				14A37FA825C577FE007F00EF /* Info.plist */,
+			);
+			path = OTFCloudClientAPITests;
+			sourceTree = "<group>";
+		};
+		14A37FC625C57B01007F00EF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14A37FB825C57885007F00EF /* Requests.swift */,
+				14A37FBC25C578A7007F00EF /* Responses.swift */,
+				14A37FC025C57A29007F00EF /* ForgeError.swift */,
+				14A37FD925C57F75007F00EF /* Endpoint.swift */,
+				14A37FDD25C57F8A007F00EF /* Auth.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		14A37FCA25C57B39007F00EF /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				14A37FB425C57852007F00EF /* TheraForgeNetwork.swift */,
+				14A37FCB25C57B64007F00EF /* NetworkingLayer.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		14A37FCF25C57D1B007F00EF /* KeychainService */ = {
+			isa = PBXGroup;
+			children = (
+				14A37FD025C57D32007F00EF /* TheraForgeKeychainService.swift */,
+			);
+			path = KeychainService;
+			sourceTree = "<group>";
+		};
+		14A37FE125C57FC2007F00EF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				844270A5272B20BB000F7D78 /* Dictionary+Extensions.swift */,
+				844270A3272B1932000F7D78 /* Encodable+Extensions.swift */,
+				14A37FE225C57FD6007F00EF /* URLSession+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		14C7107325C6D9D30059551D /* SSE */ = {
+			isa = PBXGroup;
+			children = (
+				14C7107425C6D9D30059551D /* Event.swift */,
+				14C7107525C6D9D30059551D /* EventSource.swift */,
+			);
+			path = SSE;
+			sourceTree = "<group>";
+		};
+		14F90477265237FA0022EA31 /* OTFCloudClientAPIApp */ = {
+			isa = PBXGroup;
+			children = (
+				14F90478265237FA0022EA31 /* AppDelegate.swift */,
+				14F9047A265237FA0022EA31 /* SceneDelegate.swift */,
+				14F9047C265237FA0022EA31 /* ViewController.swift */,
+				14F9047E265237FA0022EA31 /* Main.storyboard */,
+				14F90481265237FB0022EA31 /* Assets.xcassets */,
+				14F90483265237FB0022EA31 /* LaunchScreen.storyboard */,
+				14F90486265237FB0022EA31 /* Info.plist */,
+			);
+			path = OTFCloudClientAPIApp;
+			sourceTree = "<group>";
+		};
+		76EBED8EA7C2EE9C88AB03DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				855851636C3ACD741B346B2F /* Pods-OTFCloudClientAPI.debug.xcconfig */,
+				6ACAB87D124398290C50A412 /* Pods-OTFCloudClientAPI.release.xcconfig */,
+				6AEA02D9A97C123E96649A15 /* Pods-OTFCloudClientAPI-OTFCloudClientAPITests.debug.xcconfig */,
+				1AB2649C69ADC1A5FF387AA5 /* Pods-OTFCloudClientAPI-OTFCloudClientAPITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		89FF66FEC4AB40A6C00C22C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				254020658C942595FFFB7FEE /* Pods_OTFCloudClientAPI.framework */,
+				E08DD3EB0414626B61C6A3EC /* Pods_OTFCloudClientAPI_OTFCloudClientAPITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		14A37F9325C577FE007F00EF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A37FA925C577FE007F00EF /* OTFCloudClientAPI.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		14A37F9725C577FE007F00EF /* OTFCloudClientAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14A37FAC25C577FE007F00EF /* Build configuration list for PBXNativeTarget "OTFCloudClientAPI" */;
+			buildPhases = (
+				8ACBE4AF47AE68BF2CE0F99F /* [CP] Check Pods Manifest.lock */,
+				14A37F9325C577FE007F00EF /* Headers */,
+				14A37F9425C577FE007F00EF /* Sources */,
+				14A37F9525C577FE007F00EF /* Frameworks */,
+				14A37F9625C577FE007F00EF /* Resources */,
+				14A265FA26A19C2300CE30AC /* Lint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OTFCloudClientAPI;
+			productName = TheraForgeNetworkService;
+			productReference = 14A37F9825C577FE007F00EF /* OTFCloudClientAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		14A37FA025C577FE007F00EF /* OTFCloudClientAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14A37FAF25C577FE007F00EF /* Build configuration list for PBXNativeTarget "OTFCloudClientAPITests" */;
+			buildPhases = (
+				5ED2AB79FA4430E73D0E8B8C /* [CP] Check Pods Manifest.lock */,
+				14A37F9D25C577FE007F00EF /* Sources */,
+				14A37F9E25C577FE007F00EF /* Frameworks */,
+				14A37F9F25C577FE007F00EF /* Resources */,
+				38D1E20AF3251CA434390B50 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				14A37FA425C577FE007F00EF /* PBXTargetDependency */,
+				14F90495265238060022EA31 /* PBXTargetDependency */,
+			);
+			name = OTFCloudClientAPITests;
+			productName = TheraForgeNetworkServiceTests;
+			productReference = 14A37FA125C577FE007F00EF /* OTFCloudClientAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		14F90475265237FA0022EA31 /* OTFCloudClientAPIApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14F90487265237FB0022EA31 /* Build configuration list for PBXNativeTarget "OTFCloudClientAPIApp" */;
+			buildPhases = (
+				14F90472265237FA0022EA31 /* Sources */,
+				14F90473265237FA0022EA31 /* Frameworks */,
+				14F90474265237FA0022EA31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OTFCloudClientAPIApp;
+			productName = OTFCloudClientAPIApp;
+			productReference = 14F90476265237FA0022EA31 /* OTFCloudClientAPIApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14A37F8F25C577FE007F00EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					14A37F9725C577FE007F00EF = {
+						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
+					};
+					14A37FA025C577FE007F00EF = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 14F90475265237FA0022EA31;
+					};
+					14F90475265237FA0022EA31 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 14A37F9225C577FE007F00EF /* Build configuration list for PBXProject "OTFCloudClientAPI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14A37F8E25C577FE007F00EF;
+			productRefGroup = 14A37F9925C577FE007F00EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14A37F9725C577FE007F00EF /* OTFCloudClientAPI */,
+				14A37FA025C577FE007F00EF /* OTFCloudClientAPITests */,
+				14F90475265237FA0022EA31 /* OTFCloudClientAPIApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14A37F9625C577FE007F00EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14A37F9F25C577FE007F00EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14F90474265237FA0022EA31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14F90485265237FB0022EA31 /* LaunchScreen.storyboard in Resources */,
+				14F90482265237FB0022EA31 /* Assets.xcassets in Resources */,
+				14F90480265237FA0022EA31 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14A265FA26A19C2300CE30AC /* Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Lint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		38D1E20AF3251CA434390B50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OTFCloudClientAPI-OTFCloudClientAPITests/Pods-OTFCloudClientAPI-OTFCloudClientAPITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OTFCloudClientAPI-OTFCloudClientAPITests/Pods-OTFCloudClientAPI-OTFCloudClientAPITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OTFCloudClientAPI-OTFCloudClientAPITests/Pods-OTFCloudClientAPI-OTFCloudClientAPITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5ED2AB79FA4430E73D0E8B8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OTFCloudClientAPI-OTFCloudClientAPITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8ACBE4AF47AE68BF2CE0F99F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OTFCloudClientAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14A37F9425C577FE007F00EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14A37FDA25C57F76007F00EF /* Endpoint.swift in Sources */,
+				14A37FC125C57A29007F00EF /* ForgeError.swift in Sources */,
+				14A37FBD25C578A7007F00EF /* Responses.swift in Sources */,
+				14A37FCC25C57B64007F00EF /* NetworkingLayer.swift in Sources */,
+				14C7107725C6D9D30059551D /* Event.swift in Sources */,
+				844270A4272B1932000F7D78 /* Encodable+Extensions.swift in Sources */,
+				14A37FB525C57852007F00EF /* TheraForgeNetwork.swift in Sources */,
+				14A37FD125C57D32007F00EF /* TheraForgeKeychainService.swift in Sources */,
+				14A37FB925C57885007F00EF /* Requests.swift in Sources */,
+				14A37FDE25C57F8A007F00EF /* Auth.swift in Sources */,
+				844270A6272B20BB000F7D78 /* Dictionary+Extensions.swift in Sources */,
+				14C7107825C6D9D30059551D /* EventSource.swift in Sources */,
+				14A37FE325C57FD6007F00EF /* URLSession+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14A37F9D25C577FE007F00EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A5E324272159EE0049C8C0 /* Defaults.swift in Sources */,
+				14A37FA725C577FE007F00EF /* OTFClientSDKTests.swift in Sources */,
+				14307226264CEAB000E2AA75 /* OTFCloudSSETests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		14F90472265237FA0022EA31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14F9047D265237FA0022EA31 /* ViewController.swift in Sources */,
+				14F90479265237FA0022EA31 /* AppDelegate.swift in Sources */,
+				14F9047B265237FA0022EA31 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		14A37FA425C577FE007F00EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14A37F9725C577FE007F00EF /* OTFCloudClientAPI */;
+			targetProxy = 14A37FA325C577FE007F00EF /* PBXContainerItemProxy */;
+		};
+		14F90495265238060022EA31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 14F90475265237FA0022EA31 /* OTFCloudClientAPIApp */;
+			targetProxy = 14F90494265238060022EA31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		14F9047E265237FA0022EA31 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14F9047F265237FA0022EA31 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		14F90483265237FB0022EA31 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14F90484265237FB0022EA31 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14A37FAA25C577FE007F00EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		14A37FAB25C577FE007F00EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		14A37FAD25C577FE007F00EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855851636C3ACD741B346B2F /* Pods-OTFCloudClientAPI.debug.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OTFCloudClientAPI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OTFCloudClientAPI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14A37FAE25C577FE007F00EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6ACAB87D124398290C50A412 /* Pods-OTFCloudClientAPI.release.xcconfig */;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OTFCloudClientAPI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OTFCloudClientAPI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		14A37FB025C577FE007F00EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AEA02D9A97C123E96649A15 /* Pods-OTFCloudClientAPI-OTFCloudClientAPITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				INFOPLIST_FILE = OTFCloudClientAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.TheraForgeNetworkService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTFCloudClientAPIApp.app/OTFCloudClientAPIApp";
+			};
+			name = Debug;
+		};
+		14A37FB125C577FE007F00EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AB2649C69ADC1A5FF387AA5 /* Pods-OTFCloudClientAPI-OTFCloudClientAPITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 474UVJ2BEF;
+				INFOPLIST_FILE = OTFCloudClientAPITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.TheraForgeNetworkService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OTFCloudClientAPIApp.app/OTFCloudClientAPIApp";
+			};
+			name = Release;
+		};
+		14F90488265237FB0022EA31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BS4R9ZW87K;
+				INFOPLIST_FILE = OTFCloudClientAPIApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OTFCloudClientAPIApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		14F90489265237FB0022EA31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BS4R9ZW87K;
+				INFOPLIST_FILE = OTFCloudClientAPIApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.HippocratesTech.OTFCloudClientAPIApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14A37F9225C577FE007F00EF /* Build configuration list for PBXProject "OTFCloudClientAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A37FAA25C577FE007F00EF /* Debug */,
+				14A37FAB25C577FE007F00EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14A37FAC25C577FE007F00EF /* Build configuration list for PBXNativeTarget "OTFCloudClientAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A37FAD25C577FE007F00EF /* Debug */,
+				14A37FAE25C577FE007F00EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14A37FAF25C577FE007F00EF /* Build configuration list for PBXNativeTarget "OTFCloudClientAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14A37FB025C577FE007F00EF /* Debug */,
+				14A37FB125C577FE007F00EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14F90487265237FB0022EA31 /* Build configuration list for PBXNativeTarget "OTFCloudClientAPIApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14F90488265237FB0022EA31 /* Debug */,
+				14F90489265237FB0022EA31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 14A37F8F25C577FE007F00EF /* Project object */;
+}
