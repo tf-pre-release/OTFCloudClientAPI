@@ -8,7 +8,7 @@ target 'OTFCloudClientAPI' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'KeychainAccess'
-  pod 'OTFCDTDatastore'
+  pod 'OTFCDTDatastore', '2.1.1-beta.1'
   # Pods for OTFCloudClientAPI
 
   target 'OTFCloudClientAPITests' do
