@@ -141,6 +141,10 @@ public class TheraForgeNetwork: NSObject, NetworkServiceProtocol, CDTNSURLSessio
     public func changePassword(request: Request.ChangePassword, completionHandler: @escaping (Result<Response.ChangePassword, ForgeError>) -> Void) {
         network.changePassword(request: request, completionHandler: completionHandler)
     }
+    
+    public func deleteAccount(request: Request.DeleteAccount, completionHandler: @escaping (Result<Response.DeleteAccount, ForgeError>) -> Void) {
+        network.deleteAccount(request: request, completionHandler: completionHandler)
+    }
 
     public func forgotPassword(request: Request.ForgotPassword, completionHandler: @escaping (Result<Response.ForgotPassword, ForgeError>) -> Void) {
         network.forgotPassword(request: request, completionHandler: completionHandler)

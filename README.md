@@ -1,7 +1,13 @@
 # OTFCloudClientAPI
-TheraForge's Client REST API Framework to Connect to TheraForge's Secure CloudBox Backend-as-a-Service (BaaS).
+This is TheraForge's client REST API framework to connect to TheraForge's secure CloudBox Backend-as-a-Service (BaaS).
 
-OTFCloudClientAPI provides the following functions to interact with the cloud back-end.
+OTFCloudClientAPI implements the functions required to interact with the TheraForge cloud back-end.
+
+## Change Log
+* Release 1.0.0-beta: First beta release of the framework
+* Release 1.0.2-beta:
+    * Added REST API endpoint to support user account deletion
+    * Improved SSE event listeners and keys
 
 ## Configuration
 Before creating an instance of TheraForgeNetwork, you need to first set up `configurations` with the `API-KEY` assigned to you and with the server URL like so:
