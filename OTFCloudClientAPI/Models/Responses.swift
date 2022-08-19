@@ -73,6 +73,14 @@ public enum Response {
 
         public let message: String
     }
+    
+    public struct DeleteAccount: Codable {
+        public init(message: String) {
+            self.message = message
+        }
+
+        public let message: String
+    }
 
     public struct ForgotPassword: Codable {
         public init(message: String) {

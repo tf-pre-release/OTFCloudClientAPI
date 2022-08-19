@@ -34,12 +34,20 @@ OF SUCH DAMAGE.
 
 import Foundation
 
+public enum EventType: String, Codable {
+    case userDeleted = "user_deleted"
+    case dbUpdate = "db_update"
+    case keepAlive = "keep_alive"
+}
+
 public struct Event: Decodable {
-    public init(d: UInt64, message: String) {
+    public init(d: UInt64, message: String, type: EventType) {
         self.d = d
         self.message = message
+        self.type = type
     }
     
     public let d: UInt64
     public let message: String
+    public let type: EventType
 }

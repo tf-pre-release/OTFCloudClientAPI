@@ -38,17 +38,49 @@ enum HTTPMethod: String {
     case POST, GET, PUT, PATCH, DELETE
 }
 
-enum Endpoint: String {
-    case login = "auth/login",
-         signup = "auth/signup",
-         socialLogin = "auth/social-login",
-         changePassword = "auth/change-password",
-         forgotPassword = "auth/forgot-password",
-         refreshToken = "auth/refresh-token",
-         resetPassword = "auth/reset-password",
-         logout = "auth/logout",
-         sseSubscribe = "db/_subscribe",
-         sseChanges = "db/_changes"
+protocol EndpointImplementable {
+    var path: String { get }
+}
 
+enum Endpoint: EndpointImplementable {
+    case login,
+         signup,
+         socialLogin,
+         changePassword,
+         forgotPassword,
+         deleteAccount(userId: String),
+         refreshToken,
+         resetPassword,
+         logout,
+         sseSubscribe,
+         sseChanges
+    
+    var path: String {
+        switch self {
+        case .login:
+            return "auth/login"
+        case .signup:
+            return "auth/signup"
+        case .socialLogin:
+            return "auth/social-login"
+        case .changePassword:
+            return "auth/change-password"
+        case .forgotPassword:
+            return "auth/forgot-password"
+        case .deleteAccount(let userId):
+            return "auth/user-profile/\(userId)"
+        case .refreshToken:
+            return "auth/refresh-token"
+        case .resetPassword:
+            return "auth/reset-password"
+        case .logout:
+            return "auth/logout"
+        case .sseSubscribe:
+            return "db/_subscribe"
+        case .sseChanges:
+            return "db/_changes"
+        }
+    }
+    
     static let apiVersion = "v1/"
 }

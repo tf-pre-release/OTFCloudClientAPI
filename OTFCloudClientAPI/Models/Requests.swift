@@ -121,6 +121,14 @@ public enum Request {
 
         public let email: String
     }
+    
+    public struct DeleteAccount: Codable {
+        public init(userId: String) {
+            self.userId = userId
+        }
+
+        public let userId: String
+    }
 
     public struct RefreshToken: Codable {
         public init(refreshToken: String) {

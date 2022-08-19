@@ -109,7 +109,7 @@ public class NetworkingLayer: NetworkServiceProtocol {
 extension NetworkingLayer {
     public func observeOnServerSentEvents(auth: Auth) {
         let header = ["Authorization": "Bearer \(auth.token)", "Client": identifierForVendor]
-        var request = urlRequest(endpoint: .sseSubscribe, method: .GET, authRequired: true)
+        var request = urlRequest(endpoint: Endpoint.sseSubscribe, method: .GET, authRequired: true)
         request.timeoutInterval = 90
         eventSource = EventSource(url: request, headers: header)
         eventSource?.onOpen {
@@ -130,12 +130,13 @@ extension NetworkingLayer {
         eventSource?.addEventListener("user-connected") { event in
             print("SSE On added event listener: \(event)")
         }
+        
         eventSource?.connect()
     }
 
     // swiftlint:disable trailing_closure
     public func observeChangeEvent(auth: Auth) {
-        let serverURL = Self.configurations.APIBaseURL.appendingPathComponent(Endpoint.sseChanges.rawValue)
+        let serverURL = Self.configurations.APIBaseURL.appendingPathComponent(Endpoint.sseChanges.path)
         let header = ["Authorization": "Bearer \(auth.token)", "Client": identifierForVendor]
         var request = URLRequest(url: serverURL, timeoutInterval: 90)
         request.setValue("Bearer \(auth.token)", forHTTPHeaderField: "Authorization")
@@ -170,14 +171,14 @@ extension NetworkingLayer {
 // MARK: - API Callbacks
 extension NetworkingLayer {
     public func login(request: Request.Login, completionHandler: @escaping (Result<Response.Login, ForgeError>) -> Void) {
-        performRequest(endpoint: .login, method: .POST, request: request, authRequired: false, completionHandler: { [weak self] (response: Result<Response.Login, ForgeError>) in
+        performRequest(endpoint: Endpoint.login, method: .POST, request: request, authRequired: false, completionHandler: { [weak self] (response: Result<Response.Login, ForgeError>) in
             self?.handleResponse(response)
             completionHandler(response)
         })
     }
 
     public func signup(request: Request.SignUp, completionHandler: @escaping (Result<Response.Login, ForgeError>) -> Void) {
-        performRequest(endpoint: .signup, method: .POST, request: request, authRequired: false, completionHandler: { [weak self] (response: Result<Response.Login, ForgeError>) in
+        performRequest(endpoint: Endpoint.signup, method: .POST, request: request, authRequired: false, completionHandler: { [weak self] (response: Result<Response.Login, ForgeError>) in
             self?.handleResponse(response)
             completionHandler(response)
         })
@@ -189,7 +190,7 @@ extension NetworkingLayer {
             return
         }
         let request = Request.LogOut(refreshToken: refreshToken)
-        performRequest(endpoint: .logout, method: .POST, request: request, authRequired: true, completionHandler: { (response: Result<Response.LogOut, ForgeError>) in
+        performRequest(endpoint: Endpoint.logout, method: .POST, request: request, authRequired: true, completionHandler: { (response: Result<Response.LogOut, ForgeError>) in
             if case .success(_) = response {
                 TheraForgeKeychainService.shared.save(auth: nil)
                 TheraForgeKeychainService.shared.save(user: nil)
@@ -200,31 +201,35 @@ extension NetworkingLayer {
     }
     
     public func socialLogin(request: Request.SocialLogin, completionHandler: @escaping (Result<Response.Login, ForgeError>) -> Void) {
-        performRequest(endpoint: .socialLogin, method: .POST, request: request, authRequired: false, completionHandler: { [weak self] (response: Result<Response.Login, ForgeError>) in
+        performRequest(endpoint: Endpoint.socialLogin, method: .POST, request: request, authRequired: false, completionHandler: { [weak self] (response: Result<Response.Login, ForgeError>) in
             self?.handleResponse(response)
             completionHandler(response)
         })
     }
     
     public func changePassword(request: Request.ChangePassword, completionHandler: @escaping (Result<Response.ChangePassword, ForgeError>) -> Void) {
-        performRequest(endpoint: .changePassword, method: .PUT, request: request, authRequired: true, completionHandler: completionHandler)
+        performRequest(endpoint: Endpoint.changePassword, method: .PUT, request: request, authRequired: true, completionHandler: completionHandler)
+    }
+    
+    public func deleteAccount(request: Request.DeleteAccount, completionHandler: @escaping (Result<Response.DeleteAccount, ForgeError>) -> Void) {
+        performRequest(endpoint: Endpoint.deleteAccount(userId: request.userId), method: .DELETE, request: request, authRequired: true, completionHandler: completionHandler)
     }
 
     public func forgotPassword(request: Request.ForgotPassword, completionHandler: @escaping (Result<Response.ForgotPassword, ForgeError>) -> Void) {
-        performRequest(endpoint: .forgotPassword, method: .POST, request: request, authRequired: false, completionHandler: completionHandler)
+        performRequest(endpoint: Endpoint.forgotPassword, method: .POST, request: request, authRequired: false, completionHandler: completionHandler)
     }
 
     public func refreshToken(completionHandler: @escaping (Result<Response.Login, ForgeError>) -> Void) {
         guard let token = keychainService.loadAuth()?.refreshToken else { fatalError("Auth token not provided") }
         let request = Request.RefreshToken(refreshToken: token)
-        performRequest(endpoint: .refreshToken, method: .POST, request: request, authRequired: false, completionHandler: { [weak self] (response: Result<Response.Login, ForgeError>) in
+        performRequest(endpoint: Endpoint.refreshToken, method: .POST, request: request, authRequired: false, completionHandler: { [weak self] (response: Result<Response.Login, ForgeError>) in
             self?.handleResponse(response)
             completionHandler(response)
         })
     }
 
     public func resetPassword(request: Request.ResetPassword, completionHandler: @escaping (Result<Response.ChangePassword, ForgeError>) -> Void) {
-        performRequest(endpoint: .resetPassword, method: .PUT, request: request, authRequired: false, completionHandler: completionHandler)
+        performRequest(endpoint: Endpoint.resetPassword, method: .PUT, request: request, authRequired: false, completionHandler: completionHandler)
     }
 }
 
@@ -245,12 +250,12 @@ extension NetworkingLayer {
 
 extension NetworkingLayer {
     // MARK: - Common methods
-    private func urlRequest(endpoint: Endpoint,
+    private func urlRequest(endpoint: EndpointImplementable,
                             method: HTTPMethod,
                             parameters: [String: Any]? = nil,
                             parameterData: Data? = nil,
                             authRequired: Bool) -> URLRequest {
-        var request = URLRequest(url: Self.configurations.APIBaseURL.appendingPathComponent("\(Endpoint.apiVersion)" + endpoint.rawValue), cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData)
+        var request = URLRequest(url: Self.configurations.APIBaseURL.appendingPathComponent("\(Endpoint.apiVersion)" + endpoint.path), cachePolicy: URLRequest.CachePolicy.reloadIgnoringCacheData)
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         if let parameters = parameters {
             request.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: JSONSerialization.WritingOptions.prettyPrinted)
@@ -272,7 +277,7 @@ extension NetworkingLayer {
         return request
     }
 
-    private func performRequest<Request: Encodable, Response: Decodable>(endpoint: Endpoint,
+    private func performRequest<Request: Encodable, Response: Decodable>(endpoint: EndpointImplementable,
                                                                          method: HTTPMethod,
                                                                          request: Request,
                                                                          authRequired: Bool,
@@ -294,7 +299,7 @@ extension NetworkingLayer {
         }
         
         switch endpoint {
-        case .refreshToken:
+        case Endpoint.refreshToken:
             performURLRequest(urlRequest, completionHandler: completionHandler)
         default:
             checkAuthAndPerformURLRequest(urlRequest, authRequired: authRequired,
