@@ -35,11 +35,11 @@ OF SUCH DAMAGE.
 import Foundation
 
 struct Defaults {
-    static let username = "username@yourorg.com" // Update with a registered email address for the tests
-    static let password = "your_password" // Update the associated password for the above account
-    static let apiURL = URL(string: "https://theraforge.org/api")
+    static let username = "ahmed.raza@gmail.com"
+    static let password = "1231231231"
+    static let apiURL = URL(string: "https://stg.theraforge.org/api")// "https://theraforge.org/api")
     
     // swiftlint:disable line_length
-    static let APIKEY = "Update the API KEY you have received for using TheraForge" // Make sure there are no spaces 
-    static let requestTimeoutInterval: TimeInterval = 60
+    static let APIKEY = "SS9sfzWq4aWVIk0XdX4He3c2Fi9XPdcIBL0fPil7qd5t2CsWleIVvxs0tQpYTk6BeYM8zLmPCPCGZjfQ2SEt2hOFnDIv0TL0HnzT0tcp2332hgQ9BmlVaeOLWt8UrfpkJr3hf6iPngpAWaeV5Eiuljry7SxdDEhHIII6OMjSkMdykenx9fIok54HLQ8gt9pOYiyvN2gL"// "SS9sfzWq4aWVIk0XdX4He3c2Fi9XPdcIBL0fPil7qd5t2CsWleIVvxs0tQpYTk6BeYM8zLmPCPCGZjfQ2SEt2hOFnDIv0TL0HnzT0tcp2332hgQ9BmlVaeOLWt8UrfpkJr3hf6iPngpAWaeV5Eiuljry7SxdDEhHIII6OMjSkMdykenx9fIok54HLQ8gt9pOYiyvN2gL"
+    static let requestTimeoutInterval: TimeInterval = 400
 }
